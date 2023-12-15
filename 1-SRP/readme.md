@@ -16,7 +16,7 @@ Uma classe unica sem um controle apropriado dos logs.
 
 `PedidoSRPOriginal pedido = new PedidoSRPOriginal();`
 
- <img src="../img/srp-original.png" width="600" />
+[<img src="../img/srp-original.png" width="600" />](./Original/PedidoSRPOriginal.cs)
 
 ## Novo
 
@@ -24,7 +24,7 @@ A classe de pedido cuida apenas das tratativas do pedidos. Existe uma nova class
 
 `PedidoSRP pedido = new PedidoSRP();`
 
-<img src="../img/srp-novo.png" width="600" />
+[<img src="../img/srp-novo.png" width="600" />](./Novo/PedidoSRP.cs)
 
 ---
 
