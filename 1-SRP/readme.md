@@ -20,7 +20,7 @@ Uma classe unica sem um controle apropriado dos logs.
 
 ## Novo
 
-A classe de pedido cuida apenas das tratativas do pedidos. Existe uma nova classe para cuidar de _Registra Logs_ e uma para _Envio de Email_.
+A classe de pedido cuida apenas das tratativas do pedidos. Existe novas classe para cuidar de _registrar Logs_ e uma para _Envio de Email_ e _Manipulação dos Dados_.
 
 Alterações:
 
