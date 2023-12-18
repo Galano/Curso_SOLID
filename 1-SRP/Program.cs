@@ -1,13 +1,14 @@
 ﻿Console.WriteLine("[start] [" + DateTime.Now+"]");
 
 
-PedidoController pedidoController = new PedidoController();
+var enviarEmail = new EnviarEmail();
+var pedidoRepository = new PedidoRepository();
+Pedidos pedidoController = new Pedidos(pedidoRepository,enviarEmail);
 //PedidoControllerOriginal pedido = new PedidoControllerOriginal();
 
-pedidoController.IncluirPedido("EMailFrom@gmail.com", "EMailTo@gmail.com");
-pedidoController.DeletaPedido();
-pedidoController.DeletaPedido();
-pedidoController.IncluirPedido("xxx.com", "xxx.com");
+pedidoController.Gerar("EMailFrom@gmail.com", "EMailTo@gmail.com");
+pedidoController.Remover();
+pedidoController.Gerar("xxx.com", "xxx.com");
 
 Console.WriteLine("[end] [" + DateTime.Now + "]");
 

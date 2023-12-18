@@ -1,10 +1,10 @@
 ﻿using System.Net.Mail;
 
-class PedidoControllerOriginal
+class PedidosOriginal
 {
     public long Quantidade { get; set; }
     public DateTime Data { get; set; }
-    public void IncluirPedido(string from, string to)
+    public void Gerar(string from, string to)
     {
         try
         {
@@ -20,7 +20,7 @@ class PedidoControllerOriginal
             Console.WriteLine(ex.Message.ToString());
         }
     }
-    public void DeletaPedido()
+    public void Remover()
     {
         try
         {

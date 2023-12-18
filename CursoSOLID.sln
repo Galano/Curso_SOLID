@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1-SRP", "1-SRP\1-SRP.csproj
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "2-OCP", "2-OCP\2-OCP.csproj", "{292A22B4-ACE0-4DB9-B82A-C3010CD602DC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1-SRP.Test", "1-SRP.Test\1-SRP.Test.csproj", "{A9BDA3F5-A46E-4F7E-BB64-0F5BAFCED916}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{292A22B4-ACE0-4DB9-B82A-C3010CD602DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{292A22B4-ACE0-4DB9-B82A-C3010CD602DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{292A22B4-ACE0-4DB9-B82A-C3010CD602DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9BDA3F5-A46E-4F7E-BB64-0F5BAFCED916}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9BDA3F5-A46E-4F7E-BB64-0F5BAFCED916}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9BDA3F5-A46E-4F7E-BB64-0F5BAFCED916}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9BDA3F5-A46E-4F7E-BB64-0F5BAFCED916}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

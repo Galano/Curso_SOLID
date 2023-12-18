@@ -9,7 +9,7 @@
         Data = DateTime.Now;
     }
 
-    public void Incluir() 
+    public bool Incluir(string from, string to)
     {
         try
         {
@@ -19,7 +19,9 @@
         catch (Exception ex)
         {
             RegistraLog.Erro(ex);
+            return false;
         }
+        return true;
     }
     public void Deletar()
     {
