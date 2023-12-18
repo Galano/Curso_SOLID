@@ -12,7 +12,7 @@ Vantagens:
 
 ## Original
 
-Uma classe unica sem um controle apropriado dos logs.
+Uma classe unica que contempla envio de email e geração de log.
 
 `PedidoSRPOriginal pedido = new PedidoSRPOriginal();`
 
