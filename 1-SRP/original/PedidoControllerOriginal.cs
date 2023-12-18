@@ -1,37 +1,39 @@
 ﻿using System.Net.Mail;
 
-class PedidoSRPOriginal
+class PedidoControllerOriginal
 {
     public long Quantidade { get; set; }
     public DateTime Data { get; set; }
-    public void IncluirPedido()
+    public void IncluirPedido(string from, string to)
     {
         try
         {
             Console.WriteLine("Pedido incluido!");
-
-            MailMessage mailMessage = new MailMessage("EMailFrom@gmail.com", 
-                "EMailTo@gmail.com", "EMailSubject", "EMailBody");
-
+            Quantidade++;
+            MailMessage mailMessage = new MailMessage(from, to, "Novo Pedido", $"Pedidos: {Quantidade}");
             // classe de email dentro da classe pedido???
             this.EnviaEmailPedido(mailMessage);
         }
         catch (Exception ex)
         {
             // Gerando log aqui???
-            Console.WriteLine(ex.ToString());
+            Console.WriteLine(ex.Message.ToString());
         }
     }
     public void DeletaPedido()
     {
         try
         {
+            if (Quantidade <= 0)
+                throw new Exception($"Não existem pedidos");
+
+            Quantidade--;
             Console.WriteLine("Pedido deletado!");
 
         }
         catch (Exception ex)
         {
-            Console.WriteLine(ex.ToString());
+            Console.WriteLine(ex.Message.ToString());
         }
     }
     public void EnviaEmailPedido(MailMessage mailMessage)
@@ -42,7 +44,7 @@ class PedidoSRPOriginal
         }
         catch (Exception ex)
         {
-            Console.WriteLine(ex.ToString());
+            Console.WriteLine(ex.Message.ToString());
         }
     }
 }

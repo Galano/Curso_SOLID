@@ -1,11 +1,11 @@
-﻿class RegistraLog : IRegistraLog
+﻿static class RegistraLog
 {
-    public void Info(string info)
+    public static void Info(string info)
     {
         Console.WriteLine("[info] ["+ DateTime.Now +"] "+ info  );
     }
-    public void Erro(string erro)
+    public static void Erro(Exception erro)
     {
-        Console.WriteLine("[erro] [" + DateTime.Now + "] " + erro);
+        Console.WriteLine($"[erro] [{DateTime.Now}] [{erro.TargetSite.DeclaringType.Name}:{erro.TargetSite.Name}] {erro.Message}");
     }
 }

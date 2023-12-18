@@ -2,11 +2,19 @@
 
 class EnviarEmail : IEnviarEmail
 {
-    public MailMessage _mailMessage { get; set; }
+    private MailMessage? mailMessage;
     public bool Enviar(string from, string to, string subject, string body)
     {
-        // throw new Exception("aranha!");
-        _mailMessage = new MailMessage(from, to, subject, body);
-        return true;
+        try
+        {
+            mailMessage = new MailMessage(from, to, subject, body);
+            RegistraLog.Info($"E-mail enviado. / Body: {body}");
+            return true;
+        }
+        catch (Exception ex)
+        {
+            RegistraLog.Erro(ex);
+        }
+        return false;
     }
 }

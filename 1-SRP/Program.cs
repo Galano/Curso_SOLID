@@ -1,10 +1,15 @@
-﻿
-Console.WriteLine("[START] [" + DateTime.Now+"]");
+﻿Console.WriteLine("[start] [" + DateTime.Now+"]");
 
-// PedidoSRPOriginal pedido = new PedidoSRPOriginal();
-PedidoSRP pedido = new PedidoSRP();
 
-pedido.IncluirPedido();
-pedido.DeletaPedido();
+PedidoController pedidoController = new PedidoController();
+//PedidoControllerOriginal pedido = new PedidoControllerOriginal();
 
-Console.WriteLine("[END] [" + DateTime.Now + "]");
+pedidoController.IncluirPedido("EMailFrom@gmail.com", "EMailTo@gmail.com");
+pedidoController.DeletaPedido();
+pedidoController.DeletaPedido();
+pedidoController.IncluirPedido("xxx.com", "xxx.com");
+
+Console.WriteLine("[end] [" + DateTime.Now + "]");
+
+
+
