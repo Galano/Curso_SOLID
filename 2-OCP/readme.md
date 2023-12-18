@@ -1,10 +1,10 @@
 ﻿## Open/Close
 
-Você deve ser caoaz de estender um comportamento de uma classe sem a necessidade de alterá-lo.
+Você deve ser capaz de estender o comportamento de uma classe sem a necessidade de alterá-la.
 
 - Abertas para extensão
 - Fechadas para alteração
-- Incluir novas funcionalidades sem precisar mexer no que já está incrmentando mantendo o codigo estavel.
+- Incluir novas funcionalidades sem precisar mexer no que já está incrementando, mantendo o código estável.
 
 ---
 
