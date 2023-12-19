@@ -6,20 +6,14 @@ public class PedidoControllerTestes
     private Mock<IEnviarEmail> _enviarEmailMock;
     private Pedidos _pedidos;
 
-    public PedidoControllerTestes()
-    {
-        _pedidoRepositoryMock = new Mock<IPedidoRepository>();
-        _enviarEmailMock = new Mock<IEnviarEmail>();
-
-        _pedidoRepositoryMock.Setup(e => e.Deletar());
-
-        _pedidos = new Pedidos(_pedidoRepositoryMock.Object, _enviarEmailMock.Object);
-    }
-
     [Fact]
     public void IncluirComSucesso()
     {
-        // Arrange
+        _pedidoRepositoryMock = new Mock<IPedidoRepository>();
+        _enviarEmailMock = new Mock<IEnviarEmail>();
+        _pedidoRepositoryMock.Setup(e => e.Deletar());
+        _pedidos = new Pedidos(_pedidoRepositoryMock.Object, _enviarEmailMock.Object);
+
         string from = "test@test.com";
         string to = "test2@test.com";
         Assert.True(_pedidos.Gerar(from, to));

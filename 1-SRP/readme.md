@@ -27,12 +27,17 @@ Alterações:
 - _RegistraLog_, agora é uma classe _static_ não precisando mais instancia-la;
 - _EnviarEmail_, possui uma interface e cuida apenas do envio do e-mail;
 - _PedidoRepository_, possui uma interface e cuida do acesso e manipulação dos dados;
+- _Nomenclatura de métodos_ alterada para verbos em _PascalCase_;
 
 `PedidoSRP pedido = new PedidoSRP();`
 
 [<img src="../img/srp-novo.png" width="600" />](./Novo/PedidoController.cs)
 
-[<img src="../img/srp-novo-resultado.png" width="600" />](./Novo/PedidoController.cs)
+Exemplo de teste:
+
+[<img src="../img/srp-novo-teste.png" width="600" />](../1-SRP.Test/PedidosTests.cs)
+
+[<img src="../img/srp-novo-resultado.png" width="600" />](./Novo/Pedidos.cs)
 
 ---
 

@@ -1,10 +1,9 @@
-﻿Console.WriteLine("[start] [" + DateTime.Now+"]");
+﻿Console.WriteLine("[start] [" + DateTime.Now + "]");
 
 
 var enviarEmail = new EnviarEmail();
 var pedidoRepository = new PedidoRepository();
-Pedidos pedidoController = new Pedidos(pedidoRepository,enviarEmail);
-//PedidoControllerOriginal pedido = new PedidoControllerOriginal();
+Pedidos pedidoController = new Pedidos(pedidoRepository, enviarEmail);
 
 pedidoController.Gerar("EMailFrom@gmail.com", "EMailTo@gmail.com");
 pedidoController.Remover();
